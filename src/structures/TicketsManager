@@ -1,0 +1,21 @@
+import { Client } from 'discord.js';
+import { createConnection } from 'mysql';
+import { dbType } from '../typings/db';
+
+const database_infos = {
+    host: process.env.DATABASE_H,
+    user: process.env.DATABASE_U,
+    database: process.env.DATABASE_D,
+    password: process.env.DATABASE_P
+};
+export const db: dbType = createConnection(database_infos);
+db.connect((error?: string) => {
+    if (error) throw error;
+});
+
+export class TicketsManager {
+    readonly client: Client;
+    constructor(client: Client) {
+        this.client = client;
+    }
+}
