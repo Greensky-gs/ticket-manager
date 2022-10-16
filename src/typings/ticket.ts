@@ -13,3 +13,7 @@ export type ticketCreate = {
     user: User;
     guild: Guild;
 }
+export type ticketClose = {
+    guild: Guild;
+    ticket_id: string
+};

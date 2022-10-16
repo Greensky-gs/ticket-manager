@@ -2,9 +2,9 @@
   "compilerOptions": {
       "lib": ["ESNext"],
       "module": "commonjs",
-      "moduleResolution": "node",
+      "moduleResolution": "Node",
       "target": "ESNext",
-      "outDir": "dist",
+      "outDir": "./dist",
       "sourceMap": false,
       "esModuleInterop": true,
       "experimentalDecorators": true,
